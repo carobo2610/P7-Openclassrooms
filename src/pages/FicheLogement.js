@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Products from "../products.json";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
@@ -8,27 +7,73 @@ import { useParams } from "react-router";
 
 function FicheLogement() {
   //accéder attribut dans url
-  const {id} = useParams()
+  const params = useParams();
   //comparer l'id de l'URL à l'id du tableau des produits
-  const product = Products.find(item => item.id === id)
-  console.log(product)
-    return(
-    <div id="house">
-      <div className="house">
-        <div className="house__carousel">
-          <Carousel data={product.pictures} />
-        </div>
-        {/* <div className="house__collapse">
-          <Collapse data={product.pictures} />
-        </div> */}
-
+  const product = Products.find((product) => params.id === product.id);
+  console.log(product);
+    
+  return(
+    <div id="place">
+      <div className="place">
+        <div
+          title="Fiche logement"
+          description="Présentaion des logements proposés par la site Kasa"
+        />
+        {Products.filter((product) => product.id === params.id).map(
+          (product, index) => (
+          <div key={product.id - index} className="place__section">
+            {/* <div className="place__carousel">
+              <Carousel data={product.pictures} />
+            </div>  */}
+            <div className="place__box">
+              {/* partie de gauche avec la description du logement et les tags */}
+              <div className="place__description">
+                <h2>{product.title}</h2>
+                  <p className="place__location">{product.location}</p>
+                  <div className="place__tags">
+                    {product.tags.map((tag, key) => (
+                        <div className="tag" key={key}>
+                          {tag}
+                        </div>
+                      ))}
+                  </div>
+              </div>
+              {/* partie de droite avec le propriétaire et la note */}
+              <div className="place__hosting">
+                <div className="place__host">
+                  <p>{product.host.name}</p>
+                  <img
+                    className="place__host--img"
+                    src={product.host.picture}
+                    alt="Photo du locataire du logement"
+                  />
+                </div>
+                <div className="rating">
+                  <Rating rate={product.rating} />
+                </div>
+              </div>
+            </div>  
+            {/* partie inférieure avec les collapses */}
+            <div className="collapse">
+              {/* <div className="collapse__section">
+                <Collapse 
+                  title={"Description"}
+                  text={product.description}  
+                />
+              </div>
+              <div className="collapse__section">
+                <Collapse 
+                  title={"Equipements"}
+                  content={product.equipements}  
+                />
+              </div> */}
+            </div>
+          </div>
+          )
+        )}
       </div>
-    
-    
-    
-    </div>
-
-    )
+    </div>  
+    );
   }
   
   export default FicheLogement

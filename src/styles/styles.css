@@ -1,6 +1,4 @@
 
-
-
 body{
     margin: 0; 
     color: black;
@@ -107,17 +105,5 @@ li a:hover{
     .footer__text{
         font-size: 14px;
     }
-    .error img{
-        width: 198px;
-        height: 130px;
-    }
-    .error p{
-        font-size: 18px;
-        width: 80%;
-        margin: 20px 0; 
-    }
-    .error__home{
-        font-size: 14px;
-        text-decoration: underline;
-    }
+    
 } 

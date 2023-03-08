@@ -39,15 +39,18 @@ function APropos() {
                alt="Paysage de montagne"
             />
          </section>
-         {/* <div className="APropos__collapse">
+         <div className="APropos__collapse">
             {items.map((item) => (
                <div 
                   className="APropos__collapse--section" 
                   key={item.id}>
-                  <Collapse  title={item.title} text={item.text} />
+                  <Collapse  
+                     title={item.title} 
+                     text={item.text} 
+                  />
                </div>
             ))}
-         </div> */}
+         </div> 
          
 
 

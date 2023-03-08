@@ -20,10 +20,12 @@
     width: 100%;
     align-items: center;
     margin: 50px 0 50px 0;
+    background-color: pink;
 }
 .APropos__collapse--section{
     width: 80%;
     margin: 15px 0 15px 0;
+    
 }
 .collapse__button{
     display: flex;
