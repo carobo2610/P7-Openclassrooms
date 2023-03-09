@@ -3,7 +3,10 @@ import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import "../styles/FicheLogement.css";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
+//import {useNavigate} from "react-router"
+
+//rediriger avec useNavigate en cas erreur id
 
 function FicheLogement() {
   //accéder attribut dans url
