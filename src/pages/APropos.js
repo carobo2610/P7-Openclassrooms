@@ -46,7 +46,7 @@ function APropos() {
                   key={item.id}>
                   <Collapse  
                      title={item.title} 
-                     text={item.text} 
+                     content={item.text} 
                   />
                </div>
             ))}

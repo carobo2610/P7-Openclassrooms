@@ -75,3 +75,7 @@ p{
 .rating img{
     padding: 5px
 }
+
+.collapse__header{
+    background: #FF6060;
+}

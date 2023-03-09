@@ -13,7 +13,7 @@ function FicheLogement() {
   const params = useParams();
   //comparer l'id de l'URL à l'id du tableau des produits
   const product = Products.find((product) => params.id === product.id);
-  console.log(product);
+  console.log(product.pictures);
     
   return(
     <div id="place">
@@ -25,9 +25,9 @@ function FicheLogement() {
         {Products.filter((product) => product.id === params.id).map(
           (product, index) => (
           <div key={product.id - index} className="place__section">
-            {/* <div className="place__carousel">
-              <Carousel data={product.pictures} />
-            </div>  */}
+            <div className="place__carousel">
+              <Carousel images={product.pictures} />
+            </div> 
             <div className="place__box">
               {/* partie de gauche avec la description du logement et les tags */}
               <div className="place__description">
@@ -58,18 +58,18 @@ function FicheLogement() {
             </div>  
             {/* partie inférieure avec les collapses */}
             <div className="collapse">
-              {/* <div className="collapse__section">
+              <div className="collapse__section">
                 <Collapse 
                   title={"Description"}
-                  text={product.description}  
+                  content={product.description}  
                 />
               </div>
               <div className="collapse__section">
                 <Collapse 
                   title={"Equipements"}
-                  content={product.equipements}  
+                  content={product.equipments}  
                 />
-              </div> */}
+              </div>
             </div>
           </div>
           )

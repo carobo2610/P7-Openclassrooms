@@ -10,7 +10,7 @@ function Rating(rate) {
         <img 
             key={key} 
             src={Star} 
-            alt="étoile jaune" />
+            alt="étoile pleine" />
       ) : (
         <img
             className="empty__star"

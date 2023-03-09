@@ -2,32 +2,30 @@ import React, { useState } from 'react'
 import VectorTop from "../assets/VectorTop.png";
 import VectorBottom from "../assets/VectorBottom.png";
 
-function Collapse(title, text,) {
-//   //useState à false car collapse fermée par défaut
-//     const [open, setOpen] = useState(false)
+function Collapse({title, content}) {
+  //useState à false car collapse fermée par défaut
+    const [open, setOpen] = useState(true)
+    console.log(content)
+    return (
+        <div className="collapse">
+            <div className="collapse__header">
+                <div className="collapse__header__title">
+                    {title}
+                    <span 
+                        onClick={() => setOpen(!open)}
+                    >
+                        <img src={open ? VectorTop : VectorBottom} />
+                    </span>
+                </div>
+            </div>
+            { open ? <div className="collapse__description">
+                { Array.isArray(content) ? content.map(item => <p>{item}</p>) : content
 
-//     return open ? (
-//       <div>
-//         <button 
-//           className="collapse__button"
-//           type="button"
-//           onClick={() => setOpen(!open)}>
-//           <h2>{title}</h2>
-//           <img src={VectorTop} alt="flèche vers le haut" />
-//         </button>
-  
-//    ) : (
-//       <button
-//          className="collapse__button"
-//          type="button"
-//          onClick={() => setOpen(true)}
-//       >
-//          <h2>{title}</h2>
-//          <img src={VectorBottom} alt="flèche vers le bas" />
-//       </button>
-//    );
-}
-
+                }
+            </div> : null }
+        </div>
+    )
+} 
 export default Collapse
 
   
