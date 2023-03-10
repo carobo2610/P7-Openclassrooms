@@ -9,9 +9,10 @@ function Collapse({title, content}) {
     return (
         <div className="collapse">
             <div className="collapse__header">
-                <div className="collapse__header__title">
+                <div className="collapse__header--title">
                     {title}
                     <span 
+                    className="collapse__header--button"
                         onClick={() => setOpen(!open)}
                     >
                         <img src={open ? VectorTop : VectorBottom} />

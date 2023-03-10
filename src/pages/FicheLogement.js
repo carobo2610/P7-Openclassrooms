@@ -57,14 +57,14 @@ function FicheLogement() {
               </div>
             </div>  
             {/* partie inférieure avec les collapses */}
-            <div className="collapse">
-              <div className="collapse__section">
+            <div className="FicheLogement__collapse">
+              <div className="FicheLogement__collapse--section">
                 <Collapse 
                   title={"Description"}
                   content={product.description}  
                 />
               </div>
-              <div className="collapse__section">
+              <div className="FicheLogement__collapse--section">
                 <Collapse 
                   title={"Equipements"}
                   content={product.equipments}  

@@ -29,15 +29,15 @@ function Carousel({images}){
     return (
         <section className='carousel'>
                    { images.length > 1 ? <img 
-                        className='carousel_vectorRight' 
+                        className='carousel__vectorRight' 
                         src={VectorRight} 
                         alt="voir slide suivante" 
                         onClick={nextSlide}
                     /> : null} 
 
-                    {images.map(item => <img src={item}/>)}
+                    {images.map(item => <img classname="carousel__photos"src={item}/>)}
                      { images.length > 1 ? <img 
-                        className='carousel_vectorLeft' 
+                        className='carousel__vectorLeft' 
                         src={VectorLeft} 
                         alt="voir slide précédente" 
                         onClick={previousSlide}

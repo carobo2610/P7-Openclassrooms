@@ -10,6 +10,7 @@
 
 .place__box{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -41,6 +42,7 @@ p{
     align-items: center;
     width: 60px;
     margin-bottom: 25px;
+    margin-top: 10px;
     border-radius: 100%;
 }
 .place__host p{
@@ -73,9 +75,94 @@ p{
     margin: 10px 10px 10px 0;
 }
 .rating img{
-    padding: 5px
+    padding: 25px 0px 0px 5px;
+}
+/*--- Carousel ---*/
+/*toutes les images vector et images*/
+.place__carousel img{
+    width: 100px;
+    height: 400px;
+}
+.carousel__photos{
+    width: 100px;
+    height: 100px;
+}
+.carousel__vectorLeft img{
+    color: blue;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
 }
 
-.collapse__header{
-    background: #FF6060;
+.carousel__vectorRight img{
+    color: blue;
+    right: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+/*--- Mobile ---*/
+@media all and (max-width:768px){
+    #place{
+        margin-top: 30px;
+    }
+    .place__box{
+        flex-direction: column;
+    }
+    .place__description{
+        width: 100%;
+        margin: 15px 0 3px 0;
+    }
+    .place__hosting{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 10px;
+    }
+    .place__host{
+        width: 40px;
+    }
+    .place__host p{
+        width: 100%;
+    }
+    h2{
+        font-size: 23px;
+    }
+    p{
+        line-height: 142.6%;
+        font-size: 14px;
+    }
+    .tag{
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    .rating img{
+        width: 20px;
+        margin: 0 5px 0 0;
+    }
+    .place__boxes .dropdown__button{
+        border-radius: 5px;
+    }
+    .FicheLogement__collapse{
+        flex-direction: column;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .rating{
+        text-align: left;
+        align-self: center;
+        width: 100%;
+    }
+  
+    .tags{
+        flex-wrap: wrap;
+    }
 }
