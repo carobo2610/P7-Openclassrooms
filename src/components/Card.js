@@ -6,7 +6,6 @@ function Card({product}) {
     <Link
     to={`/FicheLogement/${product.id}`}
     className="product__item"
-    key={product.id}
     >
     <img
       className="product__cover"

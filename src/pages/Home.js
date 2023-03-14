@@ -14,7 +14,7 @@ function Home() {
         <Banner />
         <div className="gallery">
           {Products.map((product) => (
-          <Card product={product} />
+          <Card key={product.id} product={product} />
             ))}
         </div>
       </main>

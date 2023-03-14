@@ -15,12 +15,12 @@ function Collapse({title, content}) {
                     className="collapse__header--button"
                         onClick={() => setOpen(!open)}
                     >
-                        <img src={open ? VectorTop : VectorBottom} />
+                        <img className="collapse__header--vector" src={open ? VectorTop : VectorBottom} />
                     </span>
                 </div>
             </div>
             { open ? <div className="collapse__description">
-                { Array.isArray(content) ? content.map(item => <p>{item}</p>) : content
+                { Array.isArray(content) ? content.map(item => <p key={item}>{item}</p>) : content
 
                 }
             </div> : null }

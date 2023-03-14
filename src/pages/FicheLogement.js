@@ -3,8 +3,9 @@ import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import "../styles/FicheLogement.css";
-import { useNavigate, useParams } from "react-router";
-//import {useNavigate} from "react-router"
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 //rediriger avec useNavigate en cas erreur id
 
@@ -12,8 +13,17 @@ function FicheLogement() {
   //accéder attribut dans url
   const params = useParams();
   //comparer l'id de l'URL à l'id du tableau des produits
-  const product = Products.find((product) => params.id === product.id);
-  console.log(product.pictures);
+  //const product = Products.find((product) => params.id === product.id);
+  let product = Products.find((product) => params.id === product.id)
+
+  const navigate = useNavigate();
+  useEffect(() => {
+     if (!product) {
+        navigate("/error");
+     }
+  },[]);
+  console.log(Products);
+  console.log(params)
     
   return(
     <div id="place">

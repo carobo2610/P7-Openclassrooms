@@ -13,13 +13,6 @@
     width: 90%;
 }
 
-/*--- Carousel ---*/
-.place__carousel img{
-    width: 1240px;
-    height: 415px;
-    object-fit: cover;
-}
-
 /*--- Collapse ---*/
 .APropos__collapse{
     display: flex;
@@ -32,15 +25,16 @@
 .FicheLogement__collapse{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    margin: 50px 0 50px 0;
+    margin: 24px 0 50px 0;
     background-color: #FFFFFF;
+  
 }
 .FicheLogement__collapse--section{
-    width: 582px;
-    height: 249px;
-    font-size: 18px;
+    width: 47%;
+    font-size: 18px; 
 }
 
 .APropos__collapse--section{
@@ -48,16 +42,18 @@
     margin: 15px 0 15px 0;
     
 }
+/*éloigner le vecteur du titre*/
 .collapse__header{
     display: flex;
-    justify-content: space-between;
     font-family: 'Montserrat';
     background: #FF6060;
     color: #FFFFFF;
     border-style : none;
     height: 47px;
     border-radius: 5px;
-   
+}
+.collapse__header--vector img{
+    align-self: flex-end;
 }
 .collapse__header--title{
     display: flex;
@@ -68,16 +64,55 @@
     padding: 7.75px 0 7.25px 18.08px;
 }
 
-
-.place__box .collapse__header--button{
-    border-radius: 10px;
-    padding: 0 15px 0 15px;
-}
-
 .collapse__description{
     background-color: #F7F7F7;
     color: #FF6060;
-    font-size: 24px;
     font-family: 'Montserrat';
-    padding: 36px 27px 19px 18px  ;
+    font-size: 24px;
+    border-radius: 10px;
+    padding: 30px 12px 19px 18px;
+}
+
+@media all and (max-width:768px){
+.FicheLogement__collapse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 24px 0 50px 0;
+    background-color: #FFFFFF;
+  
+}
+.FicheLogement__collapse--section{
+    width: 100%;
+    font-size: 18px; 
+    margin-bottom: 20px;
+}
+.collapse__header{
+    display: flex;
+    align-items: center;
+    border-style : none;
+    height: 30px;
+    border-radius: 5px;
+}
+/*probleme de gap avec le vactor et le titre*/
+.collapse__header--title{
+    cursor: pointer;
+    font-size: 13px;
+    gap: 50px
+}
+.collapse__description{
+    font-size: 12px;
+    padding: 17px 6px 2px 11px;
+}
+.collapse__header--vector{
+    align-self: flex-end;
+    width: 15px;
+  
+}
+.collapse__header--title {
+    width: 9px;
+    height: 15px;
+}
 }

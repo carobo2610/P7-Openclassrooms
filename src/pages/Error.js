@@ -10,7 +10,7 @@ function Error() {
     return (
         <main className="error">
           <h1 className="error__txt"></h1>
-          <img classname="error__logo" src={Error404} alt="logo erreur 404" />
+          <img className="error__logo" src={Error404} alt="logo erreur 404" />
           <p className="error__p">
             Oups ! La page que vous demandez n'existe pas.
           </p>

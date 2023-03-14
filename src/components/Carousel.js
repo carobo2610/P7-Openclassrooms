@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import VectorLeft from "../assets/VectorLeft.png";
 import VectorRight from "../assets/VectorRight.png";
 
@@ -9,11 +9,11 @@ import VectorRight from "../assets/VectorRight.png";
 function Carousel({images}){
     const [currentIndex, setCurrentIndex] = useState(0)
     const Slider = images;
-    console.log(images)
 
     //dernier slider = lenght -1 parce que la dernière image à un chiffre décalé de 1 en JS
     //Arrivé à la dernière image, on remet le State currentIndex à 0
     const nextSlide = () => {
+        console.log(123)
         setCurrentIndex(currentIndex + 1)
         if(currentIndex === Slider.length - 1)
             setCurrentIndex(0)
@@ -25,24 +25,24 @@ function Carousel({images}){
         if(currentIndex === 0)
             setCurrentIndex(Slider.length - 1)
     }
-
+    //condition si plus d'une image dans le carousel: si oui -> flèches, si non -> pas de flèches
     return (
-        <section className='carousel'>
+        <div className='carousel'>
                    { images.length > 1 ? <img 
-                        className='carousel__vectorRight' 
+                        className='carousel__vectorRight fleche' 
                         src={VectorRight} 
                         alt="voir slide suivante" 
                         onClick={nextSlide}
                     /> : null} 
 
-                    {images.map(item => <img classname="carousel__photos"src={item}/>)}
+                    {images.map((item, index) => <img key={item}className={index === currentIndex ? "carousel-image actif" : "carousel-image"} alt="photo du logement" src={item}/>)}
                      { images.length > 1 ? <img 
-                        className='carousel__vectorLeft' 
+                        className='carousel__vectorLeft fleche' 
                         src={VectorLeft} 
                         alt="voir slide précédente" 
                         onClick={previousSlide}
                     /> : null }
-        </section>
+        </div>
     )
 
 }
