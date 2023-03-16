@@ -57,7 +57,7 @@ function FicheLogement() {
                 {/* partie de droite avec le propriétaire et la note */}
                 <div className="place__hosting">
                   <div className="place__host">
-                    <p>{product.host.name}</p>
+                    <p className="place__host--name">{product.host.name}</p>
                     <img
                       className="place__host--img"
                       src={product.host.picture}

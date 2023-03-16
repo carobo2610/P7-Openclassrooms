@@ -1,42 +1,41 @@
 /*--- Page Error ---*/
-.error{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 100px 0 20px 0;
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 100px 0 20px 0;
 }
-.error img{
-    width: 40%;
+.error img {
+  width: 40%;
 }
-.error__p{
-    color: #FF6060;
-    font-size: 36px;
-    width: 90%;
-    margin: 50px 0;
+.error__text {
+  color: #ff6060;
+  font-size: 36px;
+  width: 90%;
+  margin: 50px 0;
 }
-.error__return{
-    text-decoration: none;
-    font-size: 18px;
-    color: #FF6060;
-    margin: 100px 0 ;
+.error__return {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ff6060;
+  margin: 100px 0;
 }
-.error__return:hover{
-    text-decoration: underline;
+.error__return:hover {
+  text-decoration: underline;
 }
 
-@media all and (max-width:768px){
-    .error img{
-        width: 198px;
-        height: 130px;
-    }
-    .error p{
-        font-size: 18px;
-        width: 80%;
-        margin: 20px 0; 
-    }
-    .error__return{
-        font-size: 14px;
-        text-decoration: underline;
-    }
-} 
+@media all and (max-width: 768px) {
+  .error img {
+    min-width: 198px;
+  }
+  .error__text {
+    font-size: 18px;
+    width: 80%;
+    margin: 20px 0;
+  }
+  .error__return {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}

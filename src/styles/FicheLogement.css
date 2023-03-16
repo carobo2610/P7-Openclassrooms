@@ -1,211 +1,210 @@
 /*....Infos logements.......*/
-#place{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+#place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-.place{
-    width: 90%;
+.place {
+  width: 90%;
+}
+.place__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h2 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #ff6060;
+  margin: 0;
+}
+p {
+  color: #ff6060;
+  margin: 8px 0;
+}
+.place__description {
+  width: 70%;
+  margin: 40px 0 20px 0;
+}
+.place__name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.place__hosting {
+  margin: 30px 0 20px 0;
+  text-align: end;
+}
+.place__host {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.place__host--name {
+  width: 60px;
+  border-radius: 100%;
+  font-size: 18px;
+}
+.place__host--img {
+  object-fit: cover;
+  width: 80px;
+  border-radius: 65px;
+  margin-left: 30px;
+}
+.place__location {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0px;
 }
 
-.place__box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/*....les tags ....*/
+.place__tags {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
-h2{
-    font-weight: 500;
-    font-size: 36px;
-    color: #FF6060;
-    margin: 0;
+.tag {
+  text-align: center;
+  background: #ff6060;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 10px;
+  min-width: 100px;
+  margin: 10px 10px 0px 0;
 }
-p{
-    color: #FF6060;
-    margin: 8px 0 ;
-}
-.place__description{
-    width: 70%;
-    margin: 40px 0 20px 0;
-}
-.place__name{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.place__hosting{
-    margin: 30px 0 20px 0;
-    text-align: end;
-}
-.place__host{
-    display: flex;
-    align-items: center;
-    width: 60px;
-    margin-top: 10px;
-    border-radius: 100%;
-}
-.place__host p{
-    font-size: 18px;
-}
-.place__host--img{
-    object-fit: cover;
-    width: 80px;
-    border-radius: 65px;
-    margin-left: 30px;
-}
-.place__location{
-    font-weight: 500;
-    font-size: 18px;
-    margin: 10px 0px;
-}
-.place__tags{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-.tag{
-    text-align: center;
-    background: #FF6060;
-    color:white;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px 25px;
-    border-radius: 10px;
-    min-width: 100px;
-    margin: 10px 10px 0px 0;
-}
-.rating img{
-    padding: 25px 0px 0px 5px;
+.rating img {
+  padding: 25px 0px 0px 5px;
 }
 /*--- Carousel ---*/
-.place__carousel{
-    margin-top: 15px;
-    height: 415px;
-    width: 100%;
+.place__carousel {
+  margin-top: 15px;
+  height: 415px;
+  width: 100%;
 }
-.carousel{
-   display: block;
-   position: relative;
-   height: 415px;
-   width: 100%;
-   margin: auto auto 30px auto;
-} 
-.carousel-image{
-    width: 100%;
-    display: none;
-    object-fit: cover;
-    border-radius: 25px;
-    height: 415px;
+.carousel {
+  display: block;
+  position: relative;
+  height: 415px;
+  width: 100%;
+  margin: auto auto 30px auto;
 }
-.carousel-image.actif{
-    display: block;
+.carousel-image {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 25px;
+  height: 415px;
 }
-.fleche{
-    position: absolute;
-    width: 46px;
-    height: 79px;;
-    z-index: 1;
+.carousel-image.actif {
+  display: block;
 }
-.carousel__vectorRight{
-    margin-right: 25px;
-    top: 50%;
-    transform: translate(0, -50%);
-    cursor: pointer;
-    right: 0;
+.fleche {
+  position: absolute;
+  width: 46px;
+  height: 79px;
+  z-index: 1;
+}
+.carousel__vectorRight {
+  margin-right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  right: 0;
 }
 .carousel__vectorLeft {
-   margin-left: 25px;
-   top: 50%;
-   transform: translate(0, -50%);
-   cursor: pointer;
+  margin-left: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
 }
 
 /*--- Mobile ---*/
-@media all and (max-width:768px){
-    #place{
-        margin-top: 15px;
-    }
-    .place__box{
-        flex-direction: column;
-    }
-    .place__description{
-        width: 100%;
-        margin: 15px 0 18px 0;
-    }
-    .place__location{
-        margin: 0px;
-        font-size: 14px;
-    }
-    /*écarter les étoiles de la photo*/
-    .place__hosting{
-        display: flex;
-        align-items: center;
-        align-content: space-between;
-        flex-direction: row-reverse;
-        margin-top: 10px;
-        gap: 75px
-    }
-    .place__host{
-        width: 93px;
-        height: 33px;
-    }
-    .place__host p{
-        font-size: 12px;
-    }
-    .place__host--img{
-        object-fit: cover;
-        width: 32px;
-        border-radius: 65px;
-        margin-left: 15px;
-    }
-    h2{
-        font-size: 18px;
-    }
-    .place__tags{
-        flex-wrap: wrap;
-        margin-top: 0px;
-    }
-    .tag{
-        font-size: 10px;
-        padding: 5px 5px;
-        border-radius: 10px;
-    }
-    .rating{
-        text-align: left;
-        align-self: center;
-        width: 100%;
-    }
-    .rating img{
-        width: 15px;
-        margin: 0 5px 0 0;
-    }
-    .FicheLogement__collapse{
-        flex-direction: column;
-    }
-    .place__carousel{
-        height: 255px;
-    }
-    .carousel{
-       height: 255px;
-    } 
-    .carousel-image{
-        height: 255px;
-        border-radius: 10px;
-    }
-    .fleche{
-        position: absolute;
-        width: 11.7px;
-        height: 19.8px;
-        z-index: 1;
-    }
-    .carousel__vectorRight{
-        margin-right: 25px;
-        top: 50%;
-        right: 0;
-    }
-    .carousel__vectorLeft {
-       margin-left: 25px;
-       top: 50%;
-    }
-   
+@media all and (max-width: 768px) {
+  #place {
+    margin-top: 15px;
+  }
+  .place__box {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .place__description {
+    width: 100%;
+    margin: 15px 0 18px 0;
+  }
+  .place__location {
+    margin: 0px;
+    font-size: 14px;
+  }
+  .place__hosting {
+    display: flex;
+    align-items: center;
+    align-content: space-evenly;
+    flex-direction: row-reverse;
+    margin: 0px;
+  }
+  .place__host {
+    width: 93px;
+    height: 33px;
+  }
+  .place__host--name {
+    font-size: 12px;
+  }
+  .place__host--img {
+    object-fit: cover;
+    width: 32px;
+    border-radius: 65px;
+    margin-left: 15px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .place__tags {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 5px 5px;
+    border-radius: 10px;
+  }
+  .rating {
+    text-align: left;
+    align-self: center;
+    width: 100%;
+  }
+  .rating img {
+    width: 15px;
+    margin: 0 5px 0 0;
+  }
+  .FicheLogement__collapse {
+    flex-direction: column;
+  }
+  .place__carousel {
+    height: 255px;
+  }
+  .carousel {
+    height: 255px;
+  }
+  .carousel-image {
+    height: 255px;
+    border-radius: 10px;
+  }
+  .fleche {
+    position: absolute;
+    width: 11.7px;
+    height: 19.8px;
+    z-index: 1;
+  }
+  .carousel__vectorRight {
+    margin-right: 25px;
+    top: 50%;
+    right: 0;
+  }
+  .carousel__vectorLeft {
+    margin-left: 25px;
+    top: 50%;
+  }
 }
