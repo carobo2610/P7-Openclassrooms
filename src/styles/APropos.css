@@ -51,6 +51,9 @@
     border-style : none;
     height: 47px;
     border-radius: 5px;
+    padding: 7.75px 0 7.25px 18.08px;
+    align-items: center;
+    justify-content: space-between;
 }
 .collapse__header--vector img{
     align-self: flex-end;
@@ -61,7 +64,7 @@
     font-family: 'Montserrat';
     cursor: pointer;
     font-size: 24px;
-    padding: 7.75px 0 7.25px 18.08px;
+    
 }
 
 .collapse__description{

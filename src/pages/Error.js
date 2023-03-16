@@ -3,9 +3,6 @@ import Error404 from "../assets/404.png";
 import { Link } from "react-router-dom";
 import "../styles/Error.css"
 
-
-//si je rajoute un h1 il se voit sur la page
-
 function Error() {
     return (
         <main className="error">

@@ -11,12 +11,12 @@ function Collapse({title, content}) {
             <div className="collapse__header">
                 <div className="collapse__header--title">
                     {title}
-                    <span 
+                </div>
+                <div 
                     className="collapse__header--button"
                         onClick={() => setOpen(!open)}
                     >
-                        <img className="collapse__header--vector" src={open ? VectorTop : VectorBottom} />
-                    </span>
+                    <img className="collapse__header--vector" alt="toggle arrow" src={open ? VectorTop : VectorBottom} />
                 </div>
             </div>
             { open ? <div className="collapse__description">
