@@ -3,7 +3,7 @@ import VectorTop from '../assets/VectorTop.png'
 import VectorBottom from '../assets/VectorBottom.png'
 
 function Collapse({ title, content }) {
-  //useState à false car collapse fermée par défaut
+  //useState à false car collapses fermées par défaut
   const [open, setOpen] = useState(false)
   return (
     <div className="collapse">
@@ -15,7 +15,7 @@ function Collapse({ title, content }) {
         >
           <img
             className="collapse__header--vector"
-            alt="toggle arrow"
+            alt="Flèches d'ouverture/fermeture"
             src={open ? VectorTop : VectorBottom}
           />
         </div>

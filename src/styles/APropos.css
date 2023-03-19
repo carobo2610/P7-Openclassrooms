@@ -5,10 +5,12 @@
   position: relative;
   align-items: center;
 }
+
 .APropos {
   margin-top: 3%;
   margin-bottom: 3%;
 }
+
 .APropos__img {
   width: 90%;
 }
@@ -22,6 +24,7 @@
   margin: 50px 0 50px 0;
   background-color: #ffffff;
 }
+
 .FicheLogement__collapse {
   display: flex;
   flex-direction: row;
@@ -50,13 +53,16 @@
   border-style: none;
   height: 47px;
   border-radius: 5px;
-  padding: 5.6px 16.8px 7.25px 18.08px;
+  padding: 0px 11px;
+  margin: 0px;
   align-items: center;
   justify-content: space-between;
 }
+
 .collapse__header--vector img {
   align-self: flex-end;
 }
+
 .collapse__header--title {
   display: flex;
   align-items: center;
@@ -64,7 +70,6 @@
   cursor: pointer;
   font-size: 24px;
 }
-
 .collapse__description {
   background-color: #f7f7f7;
   color: #ff6060;
@@ -89,18 +94,30 @@
     font-size: 18px;
     margin-bottom: 20px;
   }
+  .APropos__img {
+    width: 90%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .APropos__collapse--section {
+    width: 90%;
+    margin: 10px 0 10px 0;
+  }
+  .APropos__collapse {
+    margin: 19px 0px 29px 0px;
+  }
   .collapse__header {
     display: flex;
     align-items: center;
     border-style: none;
     height: 30px;
     border-radius: 5px;
+    padding: 0 11px;
   }
-  /*probleme de gap avec le vactor et le titre*/
   .collapse__header--title {
     cursor: pointer;
     font-size: 13px;
-    gap: 50px;
   }
   .collapse__description {
     font-size: 12px;

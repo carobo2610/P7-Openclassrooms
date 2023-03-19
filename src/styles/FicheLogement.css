@@ -167,8 +167,10 @@ p {
   }
   .tag {
     font-size: 10px;
-    padding: 5px 5px;
+    padding: 5px 10px;
     border-radius: 10px;
+    min-width: 25px;
+    margin: 10px 10px 0px 0;
   }
   .rating {
     text-align: left;
@@ -199,12 +201,12 @@ p {
     z-index: 1;
   }
   .carousel__vectorRight {
-    margin-right: 25px;
+    margin-right: 15px;
     top: 50%;
     right: 0;
   }
   .carousel__vectorLeft {
-    margin-left: 25px;
+    margin-left: 15px;
     top: 50%;
   }
 }
