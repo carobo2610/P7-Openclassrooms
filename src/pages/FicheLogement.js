@@ -25,8 +25,6 @@ function FicheLogement() {
     }
     ifError()
   })
-  console.log(Products)
-  console.log(params)
 
   return (
     <div id="place">

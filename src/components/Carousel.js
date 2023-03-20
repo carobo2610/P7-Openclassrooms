@@ -12,7 +12,6 @@ function Carousel({ images }) {
   //dernier slider = lenght -1 parce que la dernière image à un chiffre décalé de 1 en JS
   //Arrivé à la dernière image, on remet le State currentIndex à 0
   const nextSlide = () => {
-    console.log(123)
     setCurrentIndex(currentIndex + 1)
     if (currentIndex === Slider.length - 1) setCurrentIndex(0)
   }
