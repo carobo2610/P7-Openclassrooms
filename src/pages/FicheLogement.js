@@ -7,8 +7,6 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-//rediriger avec useNavigate en cas erreur id
-
 function FicheLogement() {
   //accéder attribut dans url
   const params = useParams()
@@ -16,6 +14,7 @@ function FicheLogement() {
   //const product = Products.find((product) => params.id === product.id);
   let product = Products.find((product) => params.id === product.id)
 
+  //rediriger avec useNavigate en cas erreur id
   const navigate = useNavigate()
   useEffect(() => {
     function ifError() {
