@@ -63,6 +63,8 @@ p {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  max-width: 1000px;
+  flex-wrap: wrap;
 }
 .tag {
   text-align: center;
